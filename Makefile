@@ -18,4 +18,3 @@ app: ## Ejecuta la aplicación BDD
                 -p 5000:5000 \
                 -e DATABASE_URI=sqlite:///test.db \
                 rofrano/lab-flask-bdd:1.0
-
