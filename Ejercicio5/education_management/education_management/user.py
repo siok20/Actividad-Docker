@@ -8,10 +8,10 @@ class User:
         self.email = email
         self.password = password
         self.role = role
-        self.enrolled_courses = set()
+        self.enrolled_courses = []
 
     def enroll_course(self, course_id):
-        self.enrolled_courses.add(course_id)
+        self.enrolled_courses.append(course_id)
 
     def complete_course(self, course_id):
         if course_id in self.enrolled_courses:
@@ -23,5 +23,5 @@ class User:
             "name": self.name,
             "email": self.email,
             "role": self.role,
-            "enrolled_courses": list(self.enrolled_courses)
+            "enrolled_courses": self.enrolled_courses
         }

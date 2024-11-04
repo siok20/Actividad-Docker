@@ -6,7 +6,7 @@ class Lesson:
         self.duration = duration
 
     def update_content(self, new_content):
-        if not new_content.strip():
+        if not new_content:
             raise ValueError("El contenido no debe estar vacío.")
         self.content = new_content
 

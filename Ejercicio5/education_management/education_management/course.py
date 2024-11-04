@@ -5,7 +5,7 @@ class Course:
         self.description = description
         self.instructor = instructor
         self.lessons = []
-        self.enrolled_students = set()
+        self.enrolled_students = []
 
     def add_lesson(self, lesson):
         if lesson.lesson_id in [l.lesson_id for l in self.lessons]:
@@ -13,13 +13,13 @@ class Course:
         self.lessons.append(lesson)
 
     def remove_lesson(self, lesson_id):
-        self.lessons = [l for l in self.lessons if l.lesson_id != lesson_id]
+        self.lessons.remove(lesson_id)
 
     def enroll_student(self, student_id):
-        self.enrolled_students.add(student_id)
+        self.enrolled_students.append(student_id)
 
     def unenroll_student(self, student_id):
-        self.enrolled_students.discard(student_id)
+        self.enrolled_students.remove(student_id)
 
     def summary(self):
         return {
@@ -28,5 +28,5 @@ class Course:
             "description": self.description,
             "instructor": self.instructor,
             "lessons": [l.summary() for l in self.lessons],
-            "enrolled_students": list(self.enrolled_students)
+            "enrolled_students": self.enrolled_students
         }
