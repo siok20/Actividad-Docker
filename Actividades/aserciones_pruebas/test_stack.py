@@ -1,4 +1,3 @@
-"""
 from unittest import TestCase
 from stack import Stack
 
@@ -28,7 +27,6 @@ class TestStack(TestCase):
     def test_is_empty(self):
         """Prueba de si la pila está vacía"""
         raise Exception("no implementado")
-"""
 
 from unittest import TestCase
 from stack import Stack

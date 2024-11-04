@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./Ejercicio5/education_management/education_management"
+    ]
+}
